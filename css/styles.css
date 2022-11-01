@@ -11,6 +11,7 @@
     --hero-button-background-active-color: #188CE8;
     --hero-button-text-color: #FFFFFF;
     --skill-text-color: #757575;
+    --company-team-background-color: #F5F4FA;
     --company-works-title-color: #212121;
     --company-worker-name-color: #212121;
     --company-worker-position-color: #757575;
@@ -21,6 +22,7 @@
     --projects-link-color: #212121;
     --project-title-color: #212121;
     --projects-type-color: #757575;
+    --projects-item-border-color: #EEEEEE;
     --footer-logo-color: #FFFFFF;
     --hero-footer-background-color: #2F303A;
     --footer-physical-address-color: #FFFFFF;
@@ -60,20 +62,19 @@ p {
     padding-bottom: 94px;
 }
 
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .header {
-    /* background-color: tomato; */
     border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-navigation {
     display: flex;
     align-items: center;
-}
-
-.list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
 .site-logo {
@@ -154,9 +155,13 @@ p {
     background-color: var(--hero-footer-background-color);
 }
 
+.hero-container {
+    padding-top: 106px;
+    padding-bottom: 106px;
+}
+
 .hero-title {
     display: block;
-    padding-top: 106px;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -169,8 +174,7 @@ p {
 
 .hero-button {
     background: var(--hero-button-background-color);
-    width: 216px;
-    height: 50px;
+    padding: 10px 32px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-size: 16px;
@@ -198,7 +202,7 @@ p {
 }
 
 .skill {
-    width: 270px;
+    flex-basis: calc(100% / 4);
 }
 
 .skill-title {
@@ -234,6 +238,10 @@ p {
     color: var(--company-works-title-color);
 }
 
+.company-team {
+    background-color: var(--company-team-background-color);
+}
+
 .company-worker-list {
     display: flex;
 }
@@ -243,8 +251,6 @@ p {
 }
 
 .team-card {
-    /* background-color: red;
-    border: 2px solid black; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -282,8 +288,19 @@ p {
     clip: rect(0 0 0 0);
 }
 
+.projects-filter-buttons-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects-filter-buttons-list .projects-filter-item + .projects-filter-item {
+    margin-left: 8px;
+}
+
 .projects-filter-button {
     background: var(--projects-filter-button-background);
+    padding: 6px 22px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-size: 16px;
@@ -293,6 +310,8 @@ p {
     letter-spacing: 0.03em;
     cursor: pointer;
     color: var(--projects-filter-button-text-color);
+    border: none;
+    border-radius: 4px;
 }
 
 .projects-filter-button:hover,
@@ -301,12 +320,30 @@ p {
     color: var(--projects-filter-button-hover-color);
 }
 
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.projects-item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+}
+
 .project-link {
     text-decoration: none;
     color: var(--projects-link-color);
 }
 
+.project-image {
+    display: block;
+}
+
 .project-title {
+    margin-bottom: 4px;
     font-style: normal;
     font-size: 18px;
     line-height: 2;
@@ -319,6 +356,12 @@ p {
     font-size: 16px;
     line-height: 1.875;
     color: var(--projects-type-color);
+}
+
+.project-content {
+    padding: 20px 24px;
+    border: 1px solid var(--projects-item-border-color);
+    border-top: none;
 }
 
 .footer {
