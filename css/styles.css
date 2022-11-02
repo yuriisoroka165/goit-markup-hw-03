@@ -50,6 +50,12 @@ p {
     margin-bottom: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -152,17 +158,17 @@ p {
 }
 
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
     background-color: var(--hero-footer-background-color);
 }
 
-.hero-container {
-    padding-top: 106px;
-    padding-bottom: 106px;
-}
-
 .hero-title {
     display: block;
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -221,6 +227,10 @@ p {
     color: var(--skill-text-color);
 }
 
+.company-works-section {
+    padding-top: 0;
+}
+
 .company-works-list {
     display: flex;
 }
@@ -258,8 +268,13 @@ p {
     border-bottom-right-radius: 4px;
 }
 
-.company-worker-name {
+.worker-description {
     padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.company-worker-name {
+    
     margin-bottom: 10px;
     font-style: normal;
     font-size: 16px;
@@ -270,7 +285,7 @@ p {
 }
 
 .company-worker-position {
-    padding-bottom: 30px;
+    
     font-size: 16px;
     line-height: 19px;
     text-align: center;
@@ -340,10 +355,6 @@ p {
     color: var(--projects-link-color);
 }
 
-.project-image {
-    display: block;
-}
-
 .project-title {
     margin-bottom: 4px;
     font-style: normal;
@@ -367,18 +378,15 @@ p {
 }
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--hero-footer-background-color);
 }
 
 .footer-logo {
     display: block;
-    padding-top: 60px;
     margin-bottom: 20px;
     color: var(--footer-logo-color);
-}
-
-.footer-contacts-list {
-    padding-bottom: 60px;
 }
 
 .footer-contacts-list li:not(:last-child) {
